@@ -1,27 +1,35 @@
 body {
   font-family: Verdana;
-  margin: 0px; }
+  margin: 0px;
+  display: flex;
+  height: 100%; }
   body #contact_skills {
-    position: sticky;
-    width: 25%;
-    height: 100%;
-    background-color: #e27070; }
+    background-color: #e27070;
+    display: flex;
+    flex-direction: column; }
     body #contact_skills #contact {
+      padding: 0rem 2rem;
       width: calc(100% - 4rem);
-      background-color: #00DDDD;
-      padding: 3rem 2rem; }
+      background-color: #00DDDD; }
       body #contact_skills #contact .name {
-        font-size: 4rem; }
-      body #contact_skills #contact #last_name {
-        text-align: right; }
+        font-size: 4rem;
+        padding: 2rem 0rem; }
       body #contact_skills #contact span {
         display: block;
         font-size: 1.5rem;
-        margin: 1rem 0rem; }
+        padding: 0.5rem 0rem; }
+        body #contact_skills #contact span:last-of-type {
+          padding-bottom: 2rem; }
+    body #contact_skills .skill_list {
+      list-style-type: none;
+      margin: 0;
+      padding: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column; }
+      body #contact_skills .skill_list li {
+        flex-grow: 1;
+        font-size: 1.5rem; }
   body #experience {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    margin-left: 25%;
+    flex-grow: 1;
     background-color: #FF00FF; }
