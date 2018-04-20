@@ -1,0 +1,27 @@
+body {
+  font-family: Verdana;
+  margin: 0px; }
+  body #contact_skills {
+    position: sticky;
+    width: 25%;
+    height: 100%;
+    background-color: #e27070; }
+    body #contact_skills #contact {
+      width: calc(100% - 4rem);
+      background-color: #00DDDD;
+      padding: 3rem 2rem; }
+      body #contact_skills #contact .name {
+        font-size: 4rem; }
+      body #contact_skills #contact #last_name {
+        text-align: right; }
+      body #contact_skills #contact span {
+        display: block;
+        font-size: 1.5rem;
+        margin: 1rem 0rem; }
+  body #experience {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-left: 25%;
+    background-color: #FF00FF; }
