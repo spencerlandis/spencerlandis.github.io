@@ -35,20 +35,16 @@ body {
     flex-grow: 1;
     background-color: #FF00FF;
     width: 100%;
-    display: flex;
-    flex-direction: column; }
-    body #experience div {
-      flex-grow: 1; }
-    body #experience .school, body #experience .work {
-      display: flex;
-      flex-direction: row;
-      align-items: center; }
-      body #experience .school img, body #experience .work img {
-        width: 10rem;
-        height: 10rem;
-        margin: 0rem 2rem; }
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr; }
+    body #experience img {
+      width: 10rem;
+      height: 10rem;
+      margin: 0rem 2rem;
+      align-self: center;
+      justify-self: right; }
     body #experience .details {
-      flex-grow: 1;
       padding: 2rem; }
       body #experience .details span {
         display: block;
