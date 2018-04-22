@@ -1,80 +1,128 @@
 body {
     font-family:Verdana;
     margin: 0px;
-    display: flex;
     height: 100%;
-    #contact_skills {
-        background-color: rgb(226, 112, 112);
-        display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+
+    #contact {
+        padding: 0rem 2rem;
+        width:calc(100% - 4rem);
+        grid-column: span 2;
+        border-bottom: 1px solid black;
+        align-self: stretch;
+        justify-content: center;
+        display:flex;
         flex-direction: column;
 
-        #contact {
-            padding: 0rem 2rem;
-            width:calc(100% - 4rem);
-            background-color: #00DDDD;
-
-            .name {
-                font-size: 4rem;
-                padding: 2rem 0rem;
-                white-space: nowrap;
-            }
-
-            span {
-                display: block;
-                font-size: 1.5rem;
-                padding: 0.5rem 0rem;
-
-                &:last-of-type {
-                    padding-bottom: 2rem;
-                }
-            }
+        .name {
+            font-size: 4rem;
+            padding: 2rem 0rem;
         }
 
-        .skill_list {
-            list-style-type: none;
-            margin: 0;
-            padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            li {
-                flex-grow: 1;
-                font-size: 1.5rem;
+        span {
+            display: block;
+            font-size: 1.5rem;
+            padding: 0.5rem 0rem;
+
+            &:last-of-type {
+                padding-bottom: 2rem;
             }
         }
     }
 
-    #experience {
-        flex-grow: 1;
-        background-color: #FF00FF;
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-template-rows: auto 1fr 1fr 1fr;
-
-        img {
-            width: 10rem;
-            height: 10rem;
-            margin: 0rem 2rem;
-            align-self: center;
-            justify-self: right;
-        }
+    .school {
+        display: flex;
+        flex-direction: row;
+        grid-column: span 3;
+        border-bottom: 1px solid black;
+        align-self: stretch;
 
         .details {
-            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+            text-align: right;
+        }
+    }
 
-            span {
-                display: block;
-                margin: 1rem 0rem;
-            }
-            
-            .title {
-                font-size: 2rem;
-            }
-
-            .detail {
-                font-size: 1.5rem;
+    .skill_list {
+        list-style-type: none;
+        margin: 0;
+        padding: 2rem;
+        flex-grow: 1;
+        grid-row: span 3;
+        border-right: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+        ul {
+            li {
+                &:not(:last-child){
+                    margin-bottom: 0.2rem;
+                }
             }
         }
+
+        li {
+            list-style-type: none;
+            font-size: 1.5rem;
+        }
+    }
+
+    .responsibilities, .company {
+        grid-column: span 2;
+        margin: 0;
+
+        &:not(:last-of-type){
+            border-bottom: 1px solid black;
+        }
+    }
+
+    img {
+        width: 10rem;
+        height: 10rem;
+        padding-right: 2rem;
+        align-self: center;
+        justify-self: right;
+    }
+
+    .details {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        span {
+            display: block;
+            margin: 0.5rem 0rem;
+        }
+        
+        .title {
+            font-size: 2rem;
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            &:before{ 
+                display: table-cell;
+                text-align: right;
+                padding-right: .3em;
+            }
+        }
+
+        .detail {
+            font-size: 1.5rem;
+        }
+    }
+
+    .responsibilities {
+        padding-left: 0;
     }
 }
