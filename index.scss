@@ -5,12 +5,10 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto 1fr;
     grid-template-rows: auto 1fr 1fr 1fr;
+    color: rgb(20,80,50);
 
     #contact {
-        padding: 0rem 2rem;
-        width:calc(100% - 4rem);
         grid-column: span 2;
-        border-bottom: 1px solid black;
         align-self: stretch;
         justify-content: center;
         display:flex;
@@ -18,17 +16,17 @@ body {
 
         .name {
             font-size: 4rem;
-            padding: 2rem 0rem;
+            padding: 2rem 2rem;
+        }
+
+        .contact-details {
+            padding: 2rem 0;
         }
 
         span {
             display: block;
             font-size: 1.5rem;
-            padding: 0.5rem 0rem;
-
-            &:last-of-type {
-                padding-bottom: 2rem;
-            }
+            padding: 0.5rem 2rem;
         }
     }
 
@@ -36,7 +34,6 @@ body {
         display: flex;
         flex-direction: row;
         grid-column: span 3;
-        border-bottom: 1px solid black;
         align-self: stretch;
 
         .details {
@@ -54,7 +51,6 @@ body {
         padding: 2rem;
         flex-grow: 1;
         grid-row: span 3;
-        border-right: 1px solid black;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -76,10 +72,6 @@ body {
     .responsibilities, .company {
         grid-column: span 2;
         margin: 0;
-
-        &:not(:last-of-type){
-            border-bottom: 1px solid black;
-        }
     }
 
     img {
@@ -119,6 +111,16 @@ body {
 
         .detail {
             font-size: 1.5rem;
+        }
+    }
+    
+    .dark {
+        background-color: rgb(20,80,50);
+        color: rgb(255,255,255);
+
+        &.details {
+            color: rgb(20,80,50);
+            background-color: rgb(230, 230, 230);
         }
     }
 

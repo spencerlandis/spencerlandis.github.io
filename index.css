@@ -4,30 +4,27 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto 1fr;
-  grid-template-rows: auto 1fr 1fr 1fr; }
+  grid-template-rows: auto 1fr 1fr 1fr;
+  color: #145032; }
   body #contact {
-    padding: 0rem 2rem;
-    width: calc(100% - 4rem);
     grid-column: span 2;
-    border-bottom: 1px solid black;
     align-self: stretch;
     justify-content: center;
     display: flex;
     flex-direction: column; }
     body #contact .name {
       font-size: 4rem;
-      padding: 2rem 0rem; }
+      padding: 2rem 2rem; }
+    body #contact .contact-details {
+      padding: 2rem 0; }
     body #contact span {
       display: block;
       font-size: 1.5rem;
-      padding: 0.5rem 0rem; }
-      body #contact span:last-of-type {
-        padding-bottom: 2rem; }
+      padding: 0.5rem 2rem; }
   body .school {
     display: flex;
     flex-direction: row;
     grid-column: span 3;
-    border-bottom: 1px solid black;
     align-self: stretch; }
     body .school .details {
       flex-grow: 1;
@@ -41,7 +38,6 @@ body {
     padding: 2rem;
     flex-grow: 1;
     grid-row: span 3;
-    border-right: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; }
@@ -53,8 +49,6 @@ body {
   body .responsibilities, body .company {
     grid-column: span 2;
     margin: 0; }
-    body .responsibilities:not(:last-of-type), body .company:not(:last-of-type) {
-      border-bottom: 1px solid black; }
   body img {
     width: 10rem;
     height: 10rem;
@@ -79,5 +73,11 @@ body {
       padding-right: .3em; }
     body .details .detail {
       font-size: 1.5rem; }
+  body .dark {
+    background-color: #145032;
+    color: white; }
+    body .dark.details {
+      color: #145032;
+      background-color: #e6e6e6; }
   body .responsibilities {
     padding-left: 0; }
