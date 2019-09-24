@@ -47,9 +47,7 @@ body {
       font-size: 1.5rem; }
   body .section-title {
     grid-column: span 4;
-    padding: 1rem 0 !important;
-    border: solid #145032;
-    border-width: .2rem 0; }
+    padding: 1rem 0 !important; }
     body .section-title .title {
       font-size: 3rem !important;
       text-align: center; }
