@@ -103,6 +103,8 @@ body {
         }
 
         li {
+            font-size: 1.5rem;
+            
             &:not(:last-child) {
                 margin-bottom: 1rem;
             }
@@ -112,10 +114,6 @@ body {
                 text-align: right;
                 padding-right: .3em;
             }
-        }
-
-        .detail {
-            font-size: 1.5rem;
         }
     }
     
